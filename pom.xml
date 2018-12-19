@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 指定所有SpringBoot相关依赖版本号 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<!-- 自身项目相关信息 -->
+	<groupId>com.zhiyou100</groupId>
+	<artifactId>SpringBoot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SpringBoot</name>
+	<description>Demo project for Spring Boot</description>
+	<!-- 指定java版本 -->
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	
+	<dependencies>
+		
+	<!-- SpringBoot热部署 -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+				<optional>true</optional>
+		</dependency>
+	<!-- SpringBoot相关组件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- SpringBoot相关组件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+	<!-- SpringBoot web相关组件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	<!-- SpringBoot dataJpa相关组件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- mysql相关组件 -->
+			<dependency>
+			    <groupId>mysql</groupId>
+			    <artifactId>mysql-connector-java</artifactId>
+			</dependency>
+		
+	<!-- SpringBoot测试相关组件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<!-- Maven 插件 -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>
+					<!-- https://mvnrepository.com/artifact/org.springframework/springloaded -->
+					<dependency>
+					    <groupId>org.springframework</groupId>
+					    <artifactId>springloaded</artifactId>
+					    <version>1.2.6.RELEASE</version>
+					</dependency>					
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+	<packaging>war</packaging>
+</project>
